@@ -14,7 +14,8 @@ baseline: spec
 				spec
 					className: #ConfigurationOfSeaside3;
 					versionString: #'stable';
-					repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main/' ];
+					repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main/';
+					loads: #(default REST) ];
 			project: 'RESTAnnouncer' with: [
 				spec
 					className: #BaselineOfRESTAnnouncer;
