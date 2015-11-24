@@ -1,0 +1,14 @@
+{
+	"category" : "Automata-Example-ToDo",
+	"classinstvars" : [
+		"default" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ToDoSingletonAnnouncer",
+	"pools" : [
+		 ],
+	"super" : "RARemoteAnnouncer",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Automata-Example-ToDo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ToDoApplication",
+	"pools" : [
+		 ],
+	"super" : "WAComponent",
+	"type" : "normal" }

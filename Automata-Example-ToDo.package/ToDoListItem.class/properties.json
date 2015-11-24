@@ -1,0 +1,16 @@
+{
+	"category" : "Automata-Example-ToDo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"title",
+		"isDone",
+		"refId" ],
+	"name" : "ToDoListItem",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
