@@ -14,6 +14,10 @@ baseline: spec
 				spec
 					className: #ConfigurationOfSeaside3;
 					versionString: #'stable';
-					repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main/' ].
+					repository: 'http://smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main/' ];
+			project: 'RESTAnnouncer' with: [
+				spec
+					className: #BaselineOfRESTAnnouncer;
+					repository: 'github://mikefilonov/restannouncer:master' ].
 		
 		spec package: #'Automata-Example-ToDo'. ].
