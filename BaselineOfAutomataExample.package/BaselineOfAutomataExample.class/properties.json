@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfAutomataExample",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfAutomataExample",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
