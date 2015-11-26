@@ -25,6 +25,11 @@ ToDoList defaultInstances add: (ToDoList new title: 'in progress').
 ToDoList defaultInstances add: (ToDoList new title: 'archive').
 ```
 
+After the code above is run on Pharo open http://localhost:8080/todo to see the web application. Test it by adding a new item to "planned" list and checking it as "Done". Nothing happens :) Well as no workflow is running why something should happen, right?
+
+Let's configure a simple workflow: when a user clicks "done" in the "planned" list it will be moved to the "in progress" list. When the user again click "Done" the item will be moved to the "archive" list. Please see the code below to configure an automata workflow for that.
+
+Note automata event listener uses a different port (8081) and can be run in a different VM.
 
 # Workflow configuration
 ```smalltalk
@@ -74,3 +79,9 @@ automata do: [ :task |
 	 ]	repeat.
 ].
 ```
+
+Test again by creating a new item in "planned" and clicking "done" in the list.
+
+#Related projects
+- https://github.com/mikefilonov/automata  - a core for microservices communication
+- https://github.com/mikefilonov/restannouncer - HTTP/JSON announcements framework
