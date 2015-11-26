@@ -1,20 +1,24 @@
 # automata-example
 
-#Installation
+An example of Automata framework usage with a Seaside application.
 
-A Seaside application as an example of Automata framework use
+Project consists of two parts:
+- Seaside + REST application to manage several todo lists. Some actions trigger events which are sent to a remote event server
+- Automata workflow - which "moves" tasks through the list according to some workflow rules.
+
+Run the following code snipets on a fresh image to install everything.
+
+#Installation
 ```smalltalk
 Metacello new baseline: #AutomataExample; repository: 'github://mikefilonov/automata-example'; load.
 ```
 
-
-# Web-site configuration
-
+# Seaside and REST configuration
 ```smalltalk
 ZnZincServerAdaptor startOn: 8080.
 
-ToDoApplication register.
-ToDoRESTHandler register.
+ToDoApplication register. "http://localhost:8080/todo"
+ToDoRESTHandler register. "http://localhost:8080/api/list"
 
 ToDoList defaultInstances add: (ToDoList new title: 'planned').
 ToDoList defaultInstances add: (ToDoList new title: 'in progress').
@@ -23,14 +27,12 @@ ToDoList defaultInstances add: (ToDoList new title: 'archive').
 
 
 # Workflow configuration
-
 ```smalltalk
 server := RATeapotController new.
 server newAnnouncer: #first.
 server startOn: 8081.
 
-ToDoSingletonAnnouncer default url: 'http://localhost:8081/api/first' asUrl.
-
+ToDoSingletonAnnouncer default url: 'http://localhost:8081/api/first' asUrl. "configure announcer of TODO application"
 
 automata := RAAutomata new.
 automata subscribeOn: (server announcerAt: #first).
